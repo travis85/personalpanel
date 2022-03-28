@@ -3,14 +3,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Personal page</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+<script>
+    $(document).ready(() =>{
+        axios.get("https://api.openweathermap.org/data/2.5/onecall?lat=42.3314&lon=-83.0458&units=imperial&appid=b4fa144032812000e6b11d9ef3fec132")
+        .then((response)=>{
+            const min = Math.floor(response.data.daily[0].temp.min)
+            const max = Math.floor(response.data.daily[0].temp.max)
+            $("footer").append(`${min} Low - ${max} High`)
+
+            console.log(min,max)
+        })
+        .catch((error)=> {
+            console.log(error)
+        })
+    })
+</script>
 
 </head>
-<body class="bg-gray-200">
-    <div>
-        
+<body class="bg-gray-200 ">
+    <aside class="float-left pl-2 flex flex-col bg-gray-600 object-scale-down w-[20%] items-center h-screen ">
+        <img class=" rounded-full  max-w-[40%]  object-contain w-70 m-2 " src="https://www.coogfans.com/uploads/db5902/original/3X/8/1/81173237ffa580ef710b0862fdddaac163274db1.jpeg" alt="photo of me as a new Dev">
+        <nav class="">
+            
+        </nav>
+        <div class="absolute bottom-2 text-white">
+            <footer></footer>
+        </div>
+    </aside>
+
+    <div class="grid grid-cols-3  justify-items-center pt-8 space-y-4">
+
+        <a href="" class=" object-scale-down w-[60%]  ">
+            <div class=" hover:-translate-y-2 hover:scale-110 ">
+                <img src="https://pbs.twimg.com/profile_images/1456770923596554242/Si9bQRRT_400x400.jpg" alt="">
+            </div>                          
+        </a>
+        <a href="" class=" object-scale-down w-[60%]">
+            <div class="hover:-translate-y-2 hover:scale-110">
+                <img src="https://logopond.com/logos/work.gif" alt="">
+            </div>    
+        </a>
+        <a href="" class=" object-scale-down w-[60%] ">
+            <div class="hover:-translate-y-2 hover:scale-110 ">
+                <img src="https://previews.123rf.com/images/gloly67/gloly671704/gloly67170400080/76955025-family-logo-in-heart-shape-logo-design-vector-illustration-isolated-on-white-background-.jpg" alt="">
+            </div>
+        </a>
+        <a href="" class=" object-scale-down w-[60%]">
+            <div class="hover:-translate-y-2 hover:scale-110 ">
+                <img src="https://img.freepik.com/free-vector/businessman-chained-debts_3446-632.jpg?size=338&ext=jpg&ga=GA1.1.449976068.1648254288" alt="">
+            </div>    
+        </a>
+        <a href="" class=" object-scale-down w-[60%] ">
+            <div class="hover:-translate-y-2 hover:scale-110 ">
+                <img src="https://thumbs.dreamstime.com/z/personal-file-padlock-shows-private-paperwork-d-rendering-personal-file-shows-private-paperwork-d-rendering-130570671.jpg" alt="">
+            </div>    
+        </a>
+        <a href="" class=" object-scale-down w-[60%]">
+            <div class="hover:-translate-y-2 hover:scale-110 ">
+                <img src="https://www.designmantic.com/blog/wp-content/uploads/2021/02/Sports-Logo-Designs-718x300.jpg" alt="">
+            </div>    
+        </a>
+        <a href="" class=" object-scale-down w-[60%] ">
+            <div class="hover:-translate-y-2 hover:scale-110">
+                <img src="https://cdn.vectorstock.com/i/1000x1000/82/99/breaking-news-logo-template-vector-20608299.webp" alt="">
+            </div>    
+        </a>
+        <a href="/Users/travis/To_do_list/index.html" class="object-scale-down w-[60%] ">
+            <div class="hover:-translate-y-2 hover:scale-110 ">
+                <img src="https://www.recyclethis.co.uk/wp-content/uploads/2009/01/ttdt-logo.png" alt="">
+            </div>
+        </a>
+        <a href="file:///Users/travis/Library/Mobile%20Documents/com~apple~CloudDocs/underdogDev/mentorDev%20folder%20/udd-resources/dropBoxRedo/scrabbleSolverInterview/index.html" class=" object-scale-down w-[60%]">
+            <div class=" hover:-translate-y-2 hover:scale-110 ">
+                <img src="https://1000logos.net/wp-content/uploads/2021/04/Scrabble-Logo-2003.png" alt="">
+            </div>                          
+        </a>
+
     </div>
+
+
+
     
 </body>
 </html>
