@@ -5,50 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel Landing</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src=""></script>
     <link rel="personalHtml" href="/Users/travis/personalPanel/frontend/personal.html">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+
 </head>
 
 <body class="bg-gray-200">
-    <script type="module"> 
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js'
-        import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js'
-        import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-    
-        const firebaseConfig = {
-          apiKey: "AIzaSyALtDsQYt2b8HL9Pc521cea0Lr-MTqfLSs",
-          authDomain: "learning-3e6bc.firebaseapp.com",
-          projectId: "learning-3e6bc",
-          storageBucket: "learning-3e6bc.appspot.com",
-          messagingSenderId: "256886774930",
-          appId: "1:256886774930:web:3a11206b8bb8a5b5a89a4b",
-          measurementId: "G-RY4HQPCM6Q"
-        };
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app)
-
-        console.log(app)
-     </script>
-
-     <script>
-         $(document).ready(() => {
-            $("#submit").click(() => {
-
-            })
-        })
-     </script>
-    
+    <script src="./combined.mjs" type="module">
+        
+    </script>
+        
     <div class="flex flex-row justify-center">
         <div class="flex flex-col">
             <div class="text-center m-10 text-xl">
                 <h1>Welcome</h1>
             </div>
             <div class=" flex flex-col border-4 border-black border-double rounded p-2 items-center">
-                <!-- <div class="flex flex-row justify-center"> -->
+                <div class="flex flex-row justify-center">
                     <img class=" rounded-full object-cover max-w-[20%] my-4" src="https://www.coogfans.com/uploads/db5902/original/3X/8/1/81173237ffa580ef710b0862fdddaac163274db1.jpeg" alt="photo of me as a new Dev">
-                <!-- </div> -->
+                 </div> 
                 
-                <form action="/Users/travis/personalPanel/frontend/personal.html" class="flex flex-col  items-center">
+                <form action="" class="flex flex-col  items-center">
                     <div>
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" placeholder="name@example.com" class="p-2 mb-4 ml-9 rounded-lg ">
@@ -60,9 +42,7 @@
     
                     </div>
     
-                    <p><a href="/Users/travis/personalPanel/frontend/personal.html"> 
                        <input type="submit" name="submit" id="submit" value="Log In" class="bg-green-300  py-2 px-4 rounded shadow hover:shadow-2xl hover:border hover:border-black cursor-pointer">
-                    </a></p>
                 </form> 
             </div>
     
@@ -71,4 +51,3 @@
     </div>
 </body>
 </html>
-<!-- https://www.coogfans.com/uploads/db5902/original/3X/8/1/81173237ffa580ef710b0862fdddaac163274db1.jpeg" -->

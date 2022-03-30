@@ -11,23 +11,11 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous">
     </script>
-<script>
-    $(document).ready(() =>{
-        axios.get("https://api.openweathermap.org/data/2.5/onecall?lat=42.3314&lon=-83.0458&units=imperial&appid=b4fa144032812000e6b11d9ef3fec132")
-        .then((response)=>{
-            const min = Math.floor(response.data.daily[0].temp.min)
-            const max = Math.floor(response.data.daily[0].temp.max)
-            $("footer").append(`${min} Low - ${max} High`)
-
-            console.log(min,max)
-        })
-        .catch((error)=> {
-            console.log(error)
-        })
-    })
-</script>
+    <script src="./combined.mjs" type="module">
+    </script>
 
 </head>
+
 <body class="bg-gray-200 ">
     <aside class="float-left pl-2 flex flex-col bg-gray-600 object-scale-down w-[20%] items-center h-screen ">
         <img class=" rounded-full  max-w-[40%]  object-contain w-70 m-2 " src="https://www.coogfans.com/uploads/db5902/original/3X/8/1/81173237ffa580ef710b0862fdddaac163274db1.jpeg" alt="photo of me as a new Dev">
